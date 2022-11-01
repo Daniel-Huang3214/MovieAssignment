@@ -1,14 +1,11 @@
-let firstTime = true;
-
-var e = document.getElementById("movies");
+let selector = document.getElementById("movies");
 
 const button = document.getElementById("button");
 button.addEventListener("click", onChange);
 
 function onChange() {
-  var value = e.value;
-  var text = e.options[e.selectedIndex].text;
-  console.log(value, text);
+  let text = selector.options[selector.selectedIndex].text;
+  console.log(text);
   let div = document.getElementById("movie");
   div.remove();
 
@@ -73,5 +70,4 @@ function onChange() {
           document.body.append(container);
         });
     });
-  firstTime = false;
 }
