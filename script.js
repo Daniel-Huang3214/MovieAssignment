@@ -1,4 +1,4 @@
-let selector = document.getElementById("movies");
+let selector = document.getElementById("selector");
 
 function onChange() {
   let option = selector.options[selector.selectedIndex].text;
@@ -52,7 +52,7 @@ function onChange() {
         backdrop.src = `https://image.tmdb.org/t/p/w500${movieInfo.data.results.at(0).backdrop_path}`;
         title.innerHTML = `${movieInfo.data.results.at(0).title}`;
         originalTitle.innerHTML = `${movieInfo.data.results.at(0).original_title}`;
-        description.innerHTML = `Release Date: ${movieInfo.data.results.at(0).release_date} </br> Original Language: ${movieInfo.data.results.at(0).original_language} </br> Popularity: ${movieInfo.data.results.at(0).popularity}`;
+        description.innerHTML = `Release Date: ${movieInfo.data.results.at(0).release_date} </br></br> Original Language: ${movieInfo.data.results.at(0).original_language} </br></br> Popularity: ${movieInfo.data.results.at(0).popularity}`;
         overview.innerHTML = `${movieInfo.data.results.at(0).overview}`;
         voteAverage.innerHTML = `Vote Average : ${movieInfo.data.results.at(0).vote_average} </br> Vote Count : ${movieInfo.data.results.at(0).vote_count}`;
 
