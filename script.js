@@ -1,8 +1,9 @@
 let selector = document.getElementById("movies");
 
 function onChange() {
-  let text = selector.options[selector.selectedIndex].text;
-  console.log(text);
+  let option = selector.options[selector.selectedIndex].text;
+  console.log(option);
+
   let div = document.getElementById("movie");
   div.remove();
 
@@ -10,7 +11,7 @@ function onChange() {
     params: {
       api_key: "0dcabfe51b80fa2de3e80d7d256e0e81",
       include_adult: "false",
-      query: text,
+      query: option,
     },
   });
   information = information.then((movieInfo) => {
