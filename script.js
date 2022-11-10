@@ -2,7 +2,6 @@ let selector = document.getElementById("selector");
 
 function onChange() {
   let option = selector.options[selector.selectedIndex].text;
-  console.log(option);
 
   let div = document.getElementById("movie");
   div.remove();
